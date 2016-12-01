@@ -1,0 +1,18 @@
+package string;
+
+import java.io.*;
+public class StringBuffer {
+
+	public static void main ( String [] args ) {
+		
+		String str = new String("chirag solanki");
+		
+		System.out.println("found index : ");
+		
+		System.out.println(str.indexOf('o'));
+		
+		
+		
+		 
+	}
+}

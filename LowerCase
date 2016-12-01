@@ -1,0 +1,19 @@
+package string;
+
+public class StringBuffer {
+
+	public static void main ( String [] args ) {
+		
+		String str=" CHIRAG SOLANKI "; 
+		
+		System.out.println("beofre convering to lover case = " +str);
+		
+		str = str.toLowerCase();
+		
+		System.out.println("after the converting uppercase " +str);
+		
+		System.out.println(str);
+		
+		
+	}
+}

@@ -1,0 +1,41 @@
+
+public class TwoMaxNumbers{
+ 
+	   public void printTwoMaxNumbers( int [] nums) {
+		   
+		   int maxone = 0; 
+		   int maxtwo = 0;
+		   
+		   for (int n:nums) {
+			   
+			   if ( maxone < n) {
+				   
+				   maxtwo = maxone; 
+				   maxone =n; 
+				   
+			   }
+			   
+			   else if ( maxtwo < n ) {
+				   
+				   maxtwo =n;
+				   
+			   }
+		   }
+		   System.out.println("First Max Number: " +maxone);
+	        System.out.println("Second Max Number: " +maxtwo);
+	   }
+	
+	   
+	   public static void main ( String a[]) {
+		   
+		   int N[] = {1,2,3,4,5,6,7}; 
+		   
+		   TwoMaxNumbers tmn = new TwoMaxNumbers();
+		   
+		   tmn.printTwoMaxNumbers(N);
+		   
+	
+		   
+	   }
+  
+}

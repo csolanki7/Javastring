@@ -1,0 +1,38 @@
+
+public class IsParfectNumber {
+
+	public boolean isPerfectNumber( int number) {
+		
+		
+		int temp = 0; 
+		
+		for ( int i = 1; i <= number/2; i++) {
+			
+			if ( number%i ==  0) {
+				
+				temp += i; 
+			}
+		}
+		if (temp == number){
+	   
+			System.out.println(" perfect number");
+			
+			return true; 
+		}
+		
+		else {
+			
+			System.out.println("not prefect number");
+			
+			return false; 
+		}
+	}
+	
+	public static void main ( String a[]) {
+		
+		IsParfectNumber pnum = new IsParfectNumber(); 
+		
+		 System.out.println("Is perfect number: "+pnum.isPerfectNumber(28));
+	}
+	
+}

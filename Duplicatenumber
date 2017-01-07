@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class DuplicateNumbers {
+       
+	 
+	 public int findDuplicateNumber(List <Integer> numbers ) {
+		 
+		 int higheshtNumber = numbers.size()-1; 
+		 int total =getsum(numbers); 
+		 int duplicate = total - ( higheshtNumber * ( higheshtNumber + 1 )/2); 
+		 return duplicate; 
+		 
+	 }
+	 
+	 public int getsum ( List<Integer> numbers) {
+		 
+		 int sum =0; 
+		 for ( int num: numbers) {
+			 
+			 sum += num; 
+		 }
+		 
+		 return sum ;
+		 
+	 }
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	 
+		List<Integer> numbers = new ArrayList<Integer>();
+		for ( int i=1; i<30; i++) {
+			
+			numbers.add(i); 
+			
+		}
+		numbers.add(20); 
+		
+		
+		
+		DuplicateNumbers dn = new DuplicateNumbers();
+		 
+		System.out.println(" Duplication Numbers :" + dn.findDuplicateNumber(numbers));
+		
+		 
+		 
+		 
+
+	}
+
+}

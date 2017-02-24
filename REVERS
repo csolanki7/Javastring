@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+        int alen=A.length();
+        int limit=alen/2;
+        
+        boolean flag=false;
+        
+        for(int i=0; i<=limit; i++)
+        {
+            char start,end;
+            start=A.charAt(i);
+            end=A.charAt(alen-i-1);
+            
+            String str1="",str2=""; //conversion of character to string using 2 ways
+            str1=Character.toString(start); //using toString()
+            str2=String.valueOf(end); //using valueOf()
+            
+            if((str1.equals(str2)) == true)
+                flag=true;      
+            else
+            {
+                flag=false;
+                break;
+            }
+        }
+        
+        if(flag==true)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+}
